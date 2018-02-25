@@ -40,8 +40,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Enums\ArchiveFlags.cs" />
+    <Compile Include="Models\Enums\CallbackMessages.cs" />
+    <Compile Include="Models\Enums\HostOS.cs" />
+    <Compile Include="Models\Enums\OpenMode.cs" />
+    <Compile Include="Models\Enums\Operation.cs" />
+    <Compile Include="Models\Enums\PackingMethod.cs" />
+    <Compile Include="Models\Enums\RarError.cs" />
+    <Compile Include="Models\Enums\VolumeMessage.cs" />
+    <Compile Include="Models\RARHeaderData.cs" />
+    <Compile Include="Models\RARHeaderDataEx.cs" />
+    <Compile Include="Models\RAROpenArchiveData.cs" />
+    <Compile Include="Models\RAROpenArchiveDataEx.cs" />
     <Compile Include="Unrar.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UnRAR.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
