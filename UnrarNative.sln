@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnrarNative", "UnrarNative\UnrarNative.csproj", "{F9CAA285-500D-47A8-A841-6C373C9F4025}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnrarNative", "UnrarNative\UnrarNative.csproj", "{537B9741-545F-45A1-A3FF-B1FD85CB8316}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9CAA285-500D-47A8-A841-6C373C9F4025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9CAA285-500D-47A8-A841-6C373C9F4025}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9CAA285-500D-47A8-A841-6C373C9F4025}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9CAA285-500D-47A8-A841-6C373C9F4025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{537B9741-545F-45A1-A3FF-B1FD85CB8316}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{537B9741-545F-45A1-A3FF-B1FD85CB8316}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{537B9741-545F-45A1-A3FF-B1FD85CB8316}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{537B9741-545F-45A1-A3FF-B1FD85CB8316}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
