@@ -12,7 +12,7 @@ namespace UnrarNative
         public delegate IntPtr ProcessDataProc([MarshalAs(UnmanagedType.LPStr)] string addr, int Size);
 
         [DllImport("unrar.dll")]
-        private static extern IntPtr RAROpenArchive(ref RAROpenArchiveData archiveData);
+        public static extern IntPtr RAROpenArchive(ref RAROpenArchiveData archiveData);
 
         [DllImport("unrar.dll")]
         public static extern IntPtr RAROpenArchiveEx(ref RAROpenArchiveDataEx archiveData);
@@ -47,7 +47,7 @@ namespace UnrarNative
         public static extern void RARSetProcessDataProc(IntPtr hArcData, ProcessDataProc ProcessDataProc);
 
         [DllImport("unrar.dll")]
-        private static extern void RARSetPassword(IntPtr hArcData,
+        public static extern void RARSetPassword(IntPtr hArcData,
             [MarshalAs(UnmanagedType.LPStr)] string password);
 
         [DllImport("unrar.dll")]

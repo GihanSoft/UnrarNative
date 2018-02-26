@@ -42,11 +42,14 @@
   <ItemGroup>
     <Compile Include="Models\Enums\ArchiveFlags.cs" />
     <Compile Include="Models\Enums\CallbackMessages.cs" />
+    <Compile Include="Models\Enums\FileFlags.cs" />
+    <Compile Include="Models\Enums\HashType.cs" />
     <Compile Include="Models\Enums\HostOS.cs" />
     <Compile Include="Models\Enums\OpenMode.cs" />
     <Compile Include="Models\Enums\Operation.cs" />
     <Compile Include="Models\Enums\PackingMethod.cs" />
     <Compile Include="Models\Enums\RarError.cs" />
+    <Compile Include="Models\Enums\RedirType.cs" />
     <Compile Include="Models\Enums\VolumeMessage.cs" />
     <Compile Include="Models\RARHeaderData.cs" />
     <Compile Include="Models\RARHeaderDataEx.cs" />
