@@ -1,4 +1,4 @@
-﻿namespace UnrarNative.Models.Enums
+﻿namespace Gihan.UnrarNative.Models.Enums
 {
     public enum PackingMethod : uint
     {

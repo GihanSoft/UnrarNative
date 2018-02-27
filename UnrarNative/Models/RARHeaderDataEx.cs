@@ -1,7 +1,7 @@
 ﻿using System.Runtime.InteropServices;
-using UnrarNative.Models.Enums;
+using Gihan.UnrarNative.Models.Enums;
 
-namespace UnrarNative.Models
+namespace Gihan.UnrarNative.Models
 {
     /// <summary>
     /// This structure is used by RARReadHeaderEx function.
@@ -10,27 +10,27 @@ namespace UnrarNative.Models
     public struct RARHeaderDataEx
     {
         /// <summary>
-        /// contains a zero terminated string of the current archive name. 
-        /// May be used to determine the current volume name. 
+        /// contains a zero terminated string of the current archive name.
+        /// May be used to determine the current volume name.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1024)]
         public readonly string ArcName;
 
         /// <summary>
-        /// contains a zero terminated string of the current archive name in Unicode. 
-        /// May be used to determine the current volume name. 
+        /// contains a zero terminated string of the current archive name in Unicode.
+        /// May be used to determine the current volume name.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1024)]
         public readonly string ArcNameW;
 
         /// <summary>
-        /// which contains a zero terminated string of the file name in OEM (DOS) encoding. 
+        /// which contains a zero terminated string of the file name in OEM (DOS) encoding.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1024)]
         public readonly string FileName;
 
         /// <summary>
-        /// which contains a zero terminated string of the file name in Unicode. 
+        /// which contains a zero terminated string of the file name in Unicode.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 1024)]
         public readonly string FileNameW;
@@ -41,26 +41,26 @@ namespace UnrarNative.Models
         public readonly FileFlags Flags;
 
         /// <summary>
-        /// Lower 32 bits of packed file size. 
-        /// If file is split between volumes, 
-        /// it contains the lower 32 bits of file part size. 
+        /// Lower 32 bits of packed file size.
+        /// If file is split between volumes,
+        /// it contains the lower 32 bits of file part size.
         /// </summary>
         public readonly uint PackSize;
 
         /// <summary>
-        /// Higher 32 bits of packed file size. 
-        /// If file is split between volumes, 
-        /// it contains the higher 32 bits of file part size. 
+        /// Higher 32 bits of packed file size.
+        /// If file is split between volumes,
+        /// it contains the higher 32 bits of file part size.
         /// </summary>
         public readonly uint PackSizeHigh;
 
         /// <summary>
-        /// Lower 32 bits of unpacked file size. 
+        /// Lower 32 bits of unpacked file size.
         /// </summary>
         public readonly uint UnpSize;
 
         /// <summary>
-        /// Higher 32 bits of unpacked file size. 
+        /// Higher 32 bits of unpacked file size.
         /// </summary>
         public readonly uint UnpSizeHigh;
 
@@ -70,10 +70,10 @@ namespace UnrarNative.Models
         public readonly HostOS HostOS;
 
         /// <summary>
-        /// contains unpacked file CRC32. 
-        /// In case of file parts split between volumes 
-        /// only the last part contains the correct CRC and 
-        /// it is accessible only in <see cref="OpenMode.ListIncsplit"/> listing mode. 
+        /// contains unpacked file CRC32.
+        /// In case of file parts split between volumes
+        /// only the last part contains the correct CRC and
+        /// it is accessible only in <see cref="OpenMode.ListIncsplit"/> listing mode.
         /// </summary>
         public readonly uint FileCRC;
 
@@ -83,7 +83,7 @@ namespace UnrarNative.Models
         public readonly uint FileTime;
 
         /// <summary>
-        /// RAR version needed to extract file. It is encoded as 10 * Major version + minor version. 
+        /// RAR version needed to extract file. It is encoded as 10 * Major version + minor version.
         /// </summary>
         public readonly uint UnpVer;
 
@@ -100,7 +100,7 @@ namespace UnrarNative.Models
         /// <summary>
         /// Points to the buffer for file comment.
         /// <para>
-        ///     File comment support is not implemented in current unrar.dll version. 
+        ///     File comment support is not implemented in current unrar.dll version.
         ///     Appropriate parameters are preserved only for compatibility with older versions.
         /// </para>
         /// <para>
@@ -140,7 +140,7 @@ namespace UnrarNative.Models
         public readonly uint CmtState;
 
         /// <summary>
-        /// Size of file compression dictionary in kilobytes. 
+        /// Size of file compression dictionary in kilobytes.
         /// </summary>
         public readonly uint DictSize;
 
@@ -150,7 +150,7 @@ namespace UnrarNative.Models
         public readonly HashType HashType;
 
         /// <summary>
-        /// If <see cref="RARHeaderDataEx.HashType"/> == <see cref="HashType.BLACK2"/>, 
+        /// If <see cref="RARHeaderDataEx.HashType"/> == <see cref="HashType.BLACK2"/>,
         /// this array contains 32 bytes of file data BLAKE2sp hash.
         /// </summary>
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 32)]
@@ -162,26 +162,26 @@ namespace UnrarNative.Models
         public readonly RedirType RedirType;
 
         /// <summary>
-        /// Pointer to buffer to receive file system redirection target name, 
+        /// Pointer to buffer to receive file system redirection target name,
         /// such as target of symbolic link or file reference.
-        /// 
-        /// It is returned as stored in archive and 
+        ///
+        /// It is returned as stored in archive and
         /// its value might be not immediately applicable for further use.
-        /// 
-        /// For example, you may need to remove \??\ or UNC\ prefixes for Windows junctions or 
+        ///
+        /// For example, you may need to remove \??\ or UNC\ prefixes for Windows junctions or
         /// prepend the extraction destination path.
         /// </summary>
         [MarshalAs(UnmanagedType.LPWStr)]
         public string RedirName;
 
         /// <summary>
-        /// Size of buffer specified in <see cref="RedirName"/>. 
+        /// Size of buffer specified in <see cref="RedirName"/>.
         /// Ignored if <see cref="RedirName"/> is null.
         /// </summary>
         public uint RedirNameSize;
 
         /// <summary>
-        ///  Non-zero if <see cref="RedirType"/> is symbolic link and 
+        ///  Non-zero if <see cref="RedirType"/> is symbolic link and
         ///  <see cref="RedirName"/> points to directory.
         /// </summary>
         public readonly uint DirTarget;
@@ -192,30 +192,35 @@ namespace UnrarNative.Models
         /// If appropriate file time is not stored in archive, it's set to 0.
         /// </summary>
         public readonly uint MtimeLow;
+
         /// <summary>
         /// High 32 bit values of file modification time
         /// in Windows FILETIME format in Coordinated Universal Time (UTC).
         /// If appropriate file time is not stored in archive, it's set to 0.
         /// </summary>
         public readonly uint MtimeHigh;
+
         /// <summary>
         /// Low 32 bit values of file creation time
         /// in Windows FILETIME format in Coordinated Universal Time (UTC).
         /// If appropriate file time is not stored in archive, it's set to 0.
         /// </summary>
         public readonly uint CtimeLow;
+
         /// <summary>
         /// High 32 bit values of file creation time
         /// in Windows FILETIME format in Coordinated Universal Time (UTC).
         /// If appropriate file time is not stored in archive, it's set to 0.
         /// </summary>
         public readonly uint CtimeHigh;
+
         /// <summary>
         /// Low 32 bit values of file last access time
         /// in Windows FILETIME format in Coordinated Universal Time (UTC).
         /// If appropriate file time is not stored in archive, it's set to 0.
         /// </summary>
         public readonly uint AtimeLow;
+
         /// <summary>
         /// High 32 bit values of file last access time
         /// in Windows FILETIME format in Coordinated Universal Time (UTC).

@@ -1,15 +1,17 @@
 ﻿using System.Runtime.InteropServices;
-using UnrarNative.Models.Enums;
+using Gihan.UnrarNative.Models.Enums;
 
-namespace UnrarNative.Models
+namespace Gihan.UnrarNative.Models
 {
     [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi)]
     public struct RARHeaderData
     {
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 260)]
         public string ArcName;
+
         [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 260)]
         public string FileName;
+
         public ArchiveFlags Flags;
         public uint PackSize;
         public uint UnpSize;
@@ -19,8 +21,10 @@ namespace UnrarNative.Models
         public uint UnpVer;
         public PackingMethod Method;
         public uint FileAttr;
+
         [MarshalAs(UnmanagedType.LPStr)]
         public string CmtBuf;
+
         public uint CmtBufSize;
         public uint CmtSize;
         public uint CmtState;
